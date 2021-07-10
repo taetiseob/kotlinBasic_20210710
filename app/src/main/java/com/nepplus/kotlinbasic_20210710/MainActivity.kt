@@ -3,11 +3,12 @@ package com.nepplus.kotlinbasic_20210710
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    val testvar = "a";
+    val testVar = "연습용 토스트";
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         secondBtn.setOnClickListener {
             Log.e("메인화면","secondBtn이 클릭 됨")
 
+        }
+        
+        toastBtn.setOnClickListener { 
+            Toast.makeText(this,testVar,Toast.LENGTH_SHORT).show();
         }
     }
 }
