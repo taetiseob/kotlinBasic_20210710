@@ -7,13 +7,20 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+    val testvar = "a";
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //테스트 버튼 이벤트리스너 등록
         testBtn.setOnClickListener {
             //버튼이 눌리는지 로그를 찍어보자.
-            Log.d("메인화면","testBtn이 클릭 됨");
+            Log.d("메인화면","testBtn이 클릭 됨")
+            Log.i("메인화면","로그 두줄이 찍히게.")
+            Log.wtf("w","bh")
+        }
+        secondBtn.setOnClickListener {
+            Log.e("메인화면","secondBtn이 클릭 됨")
+
         }
     }
 }
